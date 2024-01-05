@@ -10,7 +10,7 @@ import getPost from "@/firebase/getPost";
 const Postdetail: NextPage = (): JSX.Element => {
   const router = useRouter();
   const postTime = router.query.slug as string;
-  const [ selectedPost, setSelectedPost ] = useState();
+  const [selectedPost, setSelectedPost] = useState();
 
   useEffect(() => {
     getId(postTime);
@@ -20,7 +20,7 @@ const Postdetail: NextPage = (): JSX.Element => {
 
     const docRef = await getPostDocument();
     const postList: any[] = await Promise.all(docRef.map(getPost));
-    setSelectedPost(postList.find(post=>post?.created_datetime.seconds === Number(e)))
+    setSelectedPost(postList.find(post => post?.created_datetime.seconds === Number(e)))
   };
 
   return (
