@@ -16,7 +16,6 @@ export default function Home() {
 
   const fetchData = async () => {
     const idList = await getUserDocument();
-
     const userDataList = await Promise.all(idList.map((id) => getUser(id)));
     setUserList(userDataList);
   };
