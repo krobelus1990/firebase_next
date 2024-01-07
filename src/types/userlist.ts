@@ -1,4 +1,4 @@
-export interface props{
+export interface props {
   users: any[]
 }
 
