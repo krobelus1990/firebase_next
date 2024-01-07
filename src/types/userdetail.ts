@@ -1,3 +1,3 @@
-export interface userdetailProps{
-    userId : string
-  }
+export interface userdetailProps {
+  userId: string
+}
